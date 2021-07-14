@@ -12,6 +12,7 @@
 # ide
 .idea
 .vscode
+.vscode/settings.json
 
 # misc
 .env.local
