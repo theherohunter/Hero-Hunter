@@ -1,0 +1,26 @@
+{
+  "name": "hero-hunter-web",
+  "version": "1.0.0",
+  "description": "The tech talent hire app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theherohunter/Hero-Hunter.git"
+  },
+  "keywords": [
+    "tech",
+    "talent",
+    "hire",
+    "hr",
+    "recruit"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theherohunter/Hero-Hunter/issues"
+  },
+  "homepage": "https://github.com/theherohunter/Hero-Hunter#readme"
+}
