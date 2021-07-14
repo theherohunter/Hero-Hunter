@@ -1,4 +1,4 @@
-# Hero Hunter - hire tech heroes around us
+# Hero Hunter - hire tech heroes around you
 
 ## Local development instructions
 
