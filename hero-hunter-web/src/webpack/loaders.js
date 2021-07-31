@@ -48,6 +48,7 @@ function getLoaders() {
           options: {
             lessOptions: {
               paths: [resolvePath('node_modules'), resolvePath('src/static')],
+              javascriptEnabled: true,
             },
           },
         },
