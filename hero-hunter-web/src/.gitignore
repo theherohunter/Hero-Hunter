@@ -25,4 +25,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # certificates
-*.pem
+/host-certificates/*.pem
