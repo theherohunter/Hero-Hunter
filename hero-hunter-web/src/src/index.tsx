@@ -10,11 +10,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { RootPage } from './pages';
+import { RootProviders } from './components';
+import { injector, setupInjector } from './injector';
+import { injectionTokens } from './types';
 
 configureMobx({ useProxies: 'never', enforceActions: 'never' });
+
+setupInjector();
 
 if (!appConfig.isProd) {
   window.toJS = toJS;
 }
 
-ReactDOM.render(<RootPage />, document.getElementById('app'));
+ReactDOM.render(
+  <RootProviders rootStore={injector.get(injectionTokens.rootStore)}>
+    <RootPage />
+  </RootProviders>,
+  document.getElementById('app'),
+);
