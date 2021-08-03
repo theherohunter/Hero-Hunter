@@ -57,15 +57,15 @@ const splitChunks = {
   },
 };
 
-// const readFileIfExists = (filepath) => fs.existsSync(filepath) && fs.readFileSync(filepath);
+const readFileIfExists = (filepath) => fs.existsSync(filepath) && fs.readFileSync(filepath);
 
 const devServer = {
   contentBase: paths.build,
   historyApiFallback: true,
-  port: 44358,
+  port: 5005,
   https: true,
-  //   key: readFileIfExists('./webpack/host-certificates/localhost-key.pem'),
-  //   cert: readFileIfExists('./webpack/host-certificates/localhost.pem'),
+  key: readFileIfExists('./webpack/host-certificates/localhost-key.pem'),
+  cert: readFileIfExists('./webpack/host-certificates/localhost.pem'),
   hot: true,
   open: true,
 };
