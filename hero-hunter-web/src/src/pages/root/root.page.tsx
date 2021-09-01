@@ -4,10 +4,11 @@ import { routesConfig } from '@root/services';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { MainPage } from '../main';
 import { NotFoundPage } from '../errors';
+import { Navigation } from '@root/components';
 
 const Layout: React.FC = ({ children }) => (
   <Router>
-    {/* TODO: add navigation */}
+    <Navigation />
     {children}
   </Router>
 );

@@ -6,7 +6,13 @@ interface L10nSchema {
 export interface L10Dictionary {
   navigation: {
     menu: {
-      home: L10nSchema;
+      jobs: L10nSchema;
+      companies: L10nSchema;
+      candidates: L10nSchema;
+    };
+    buttons: {
+      login: L10nSchema;
+      registration: L10nSchema;
     };
   };
 }
