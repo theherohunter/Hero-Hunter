@@ -1,0 +1,25 @@
+.set-size(@width: 0px, @height: 0px) {
+  width: @width;
+  height: @height;
+}
+
+.set-flex(@flex-direction: row, @justify-content: flex-start, @align-items: stretch) {
+  display: flex;
+  flex-direction: @flex-direction;
+  justify-content: @justify-content;
+  align-items: @align-items;
+}
+
+.set-position(@position: static, @top: auto, @right: auto, @bottom: auto, @left: auto) {
+  position: @position;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+.set-font(@size: @font-size-md, @color: @font-default, @font-weight: @font-weight-base) {
+  font-size: @size;
+  color: @color;
+  font-weight: @font-weight;
+}

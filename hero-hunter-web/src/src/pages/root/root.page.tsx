@@ -1,17 +1,31 @@
 import React from 'react';
 
-import { Button } from 'antd';
-import { useL10n } from '@root/services';
-import { FormattedMessage } from 'react-intl';
+import { routesConfig } from '@root/services';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { MainPage } from '../main';
+import { NotFoundPage } from '../errors';
+
+const Layout: React.FC = ({ children }) => (
+  <Router>
+    {/* TODO: add navigation */}
+    {children}
+  </Router>
+);
+
+const RootRoutes: React.FC = () => {
+  return (
+    <Layout>
+      <Switch>
+        <Route path={routesConfig.root.path()} component={MainPage} />
+
+        <Route path={routesConfig.notFound.path()} component={NotFoundPage} />
+
+        <Redirect to={routesConfig.notFound.path()} />
+      </Switch>
+    </Layout>
+  );
+};
 
 export const RootPage: React.FC = () => {
-  const { dictionary } = useL10n();
-
-  return (
-    <div>
-      <h2>Root Page</h2>
-      <Button type="primary">Button</Button>
-      <FormattedMessage id={dictionary.navigation.menu.home.id} />
-    </div>
-  );
+  return <RootRoutes />;
 };
